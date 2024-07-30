@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .logo {
+    margin-left: 20px;
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    align-items: center;
+}
+
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 100px 20px 20px; /* Adjusted padding to account for fixed header */
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content .text {
+    flex: 1;
+    text-align: center; /* Center-align text */
+    padding: 20px;
+}
+
+.content .text h1 {
+    font-family: 'Montserrat', sans-serif; /* Different font style */
+    font-size: 3em; /* Bigger font size */
+    margin: 0.5em 0;
+    line-height: 0.2;
+
+}
+
+.content .text h5 {
+    font-family: 'Montserrat', sans-serif; /* Different font style */
+    font-size: 1.5em; /* Bigger font size */
+    margin: 0.2em 0; /* Reduced margin to decrease line spacing */
+    line-height: 1;/* Reduced line height to decrease spacing */
+}
+.content .text p {
+    font-size: 1em; /* Bigger font size */
+    margin: 0.2em 0; /* Reduced margin to decrease line spacing */
+    line-height: 1;/* Reduced line height to decrease spacing */
+}
+
+.content .image {
+    flex: 1;
+    text-align: right;
+    padding: 5px; /* Reduced padding */
+}
+
+.content .image img {
+    max-width: 80%; /* Reduced size to half */
+    height: auto;
+    border-radius: 10px;
+    float: right;
+}
+
+#products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 200px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Ensure the image fits within the container */
+    border-radius: 10px;
+}
+
+.product h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #3e00f9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #e64a19;
+}
+
+#about {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.about-content h1 {
+    font-family: 'Montserrat', sans-serif; /* Different font style */
+    font-size: 3em; /* Bigger font size */
+    margin: 10px 0;
+}
+.about-content p {
+    font-family: 'Montserrat', sans-serif; /* Different font style */
+    margin: 10px 0;
+}
+
+.about-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#contact {
+    padding: 20px;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px); /* Reduce width to add padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.contact-form button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e64a19;
+}
+
+#cart {
+    padding: 20px;
+}
+
+#cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#cart-items li {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cart-items img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+#cart-items .item-info {
+    flex-grow: 1;
+}
+
+#cart-items .item-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+#cart-items .item-info p {
+    margin: 0;
+}
+
+#cart-total {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
